@@ -13,8 +13,8 @@ const Body = () => {
       scrollEventThrottle={16}
     >
       <View style={styles.row}>
-        {movies.map((movie, index) => (
-          <View key={index} style={styles.movieContainer}>
+        {movies.map((movie) => (
+          <View key={movie.id} style={styles.movieContainer}>
             <MovieCard moviesList={movie} />
           </View>
         ))}
