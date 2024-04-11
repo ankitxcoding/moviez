@@ -56,10 +56,13 @@ const styles = StyleSheet.create({
     aspectRatio: 2 / 3,
   },
   textContainer: {
+    flex: 1,
+    justifyContent: "space-evenly",
     backgroundColor: "#E50914",
     paddingHorizontal: 10,
     paddingVertical: 5,
     alignSelf: "stretch",
+    minHeight: 100,
   },
   text: {
     color: "#fff",
