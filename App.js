@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator } from '@react-navigation/stack';
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import MovieDetails from "./src/components/MovieDetails";
