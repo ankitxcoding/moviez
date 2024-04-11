@@ -11,6 +11,7 @@ const Body = () => {
       contentContainerStyle={[styles.container, { paddingBottom: 50 }]}
       onScroll={handleScroll}
       scrollEventThrottle={16}
+      style={{ backgroundColor: "#000" }}
     >
       <View style={styles.row}>
         {movies.map((movie) => (
