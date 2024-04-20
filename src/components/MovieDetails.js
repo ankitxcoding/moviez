@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Linking,
   ScrollView,
+  ActivityIndicator,
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import {
@@ -27,7 +28,11 @@ const MovieDetails = ({ route }) => {
   const movieCredit = useMovieCredits(movieId);
 
   if (!movieDetails) {
-    return <Text>Loading...</Text>;
+    return (
+      <View style={styles.activityIndicator}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
   }
 
   const {
@@ -94,7 +99,6 @@ const MovieDetails = ({ route }) => {
               <Image
                 style={styles.castImage}
                 source={{ uri: BASE_POSTER_URL + cast.profile_path }}
-                resizeMode="contain"
               />
             ) : (
               <Icon name="user" size={120} color="#a8a29e" />
@@ -113,6 +117,12 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: "#000",
     paddingVertical: 20,
+  },
+  activityIndicator: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#000",
   },
   image: {
     width: "100%",
@@ -163,13 +173,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   castItem: {
+    width: 100,
     marginRight: 10,
     alignItems: "center",
   },
   castImage: {
-    width: 80,
-    height: 120,
-    borderRadius: 5,
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    resizeMode: "cover",
   },
   castName: {
     color: "#fff",
