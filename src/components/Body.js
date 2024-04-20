@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
   movieContainer: {
     width: "45%",
     marginBottom: 20,
+    alignItems: "center"
   },
   loaderContainer: {
     alignItems: "center",
