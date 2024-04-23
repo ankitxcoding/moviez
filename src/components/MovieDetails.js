@@ -101,7 +101,7 @@ const MovieDetails = ({ route }) => {
                 source={{ uri: BASE_POSTER_URL + cast.profile_path }}
               />
             ) : (
-              <Icon name="user" size={120} color="#a8a29e" />
+              <Icon name="user" size={100} color="#a8a29e" />
             )}
             <Text style={styles.castName}>{cast.name}</Text>
             <Text style={styles.characterName}>{cast.character}</Text>
